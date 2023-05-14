@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本格式化</title>
+    <script src="web.js"></script>
+
+    <style>
+        .nav {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -8px;
+            border-bottom: 1px solid rgb(205, 199, 199);
+            font-size: 16px;
+            width: auto;
+            height: 60px;
+            background-color: #333;
+
+
+        }
+
+        .nav-link {
+            color: rgb(250, 248, 248);
+            text-decoration: none;
+        }
+
+        .nav-link:hover {}
+
+        .nav li {
+            display: inline-block;
+            list-style: none;
+            height: 60px;
+            line-height: 60px;
+            padding: 0 40px;
+            transition: all .3s ease-in;
+        }
+
+        .nav li:hover {
+            background-color: rgb(82, 71, 71);
+            border-radius: 10%;
+        }
+
+        .site-title {
+            font-size: large;
+            color: rgb(247, 244, 244);
+        }
+
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .img {
+            float: left;
+            display: block;
+            height: 30px;
+            width: 30px;
+
+            margin-left: 119px;
+            margin-top: 16px;
+            border-radius: 30%;
+        }
+
+        h1 {
+
+
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(80, 27, 155);
+
+            width: 260px;
+            height: auto;
+            font-size: 50px;
+            /* 标题文字大小 */
+            line-height: 1.5;
+            /* 行高 */
+            margin-left: 640px;
+
+        }
+
+        h1:hover {
+
+
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+            transition: all .2s ease-in;
+            font-size: 60px;
+            color: rgb(36, 135, 148);
+            /* 标题文字大小 */
+            line-height: 1.5;
+            /* 行高 */
+            text-align: center;
+            /* 文本居中对齐 */
+            border-radius: 10%;
+
+        }
+
+        body {
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li:hover {
+            color: red;
+            transition: all .11s ease-in;
+
+        }
+
+
+
+
+
+
+
+        table {
+            border-collapse: collapse;
+            /* 边框合并 */
+            width: 80%;
+            /* 表格宽度 */
+        }
+
+        td,
+        th {
+            border: 1px solid #ddd;
+            /* 单元格边框 */
+            padding: 8px;
+            /* 单元格内边距 */
+            text-align: left;
+            /* 单元格文本左对齐 */
+        }
+
+        .zs {
+            height: 300px;
+            width: 1510px;
+
+        }
+
+        .block {
+            background-color: #ddd;
+            margin-left: 600px;
+            margin-right: 600px;
+        }
+
+        .gzjy {
+            background-image: url(./t1.png);
+            background-size: cover;
+            width: auto;
+            height: 400px;
+        }
+
+        .xmjy {
+            background-image: url(./t2.png);
+            background-size: cover;
+            width: auto;
+            height: 300px;
+        }
+
+        .sjjy {
+            background-image: url(./t3.png);
+            background-size: cover;
+            width: auto;
+            height: 300px;
+        }
+
+        .wdtc {
+            background-image: url(./t4.png);
+            background-size: cover;
+            width: auto;
+            height: 300px;
+        }
+
+        .zwpj {
+            background-image: url(./t5.png);
+            background-size: cover;
+            width: auto;
+            height: 300px;
+        }
+
+        .introduce li {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: large;
+
+        }
+
+        .img2 {
+            opacity: 0;
+            width: auto;
+            height: 130px;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(1);
+            }
+        }
+
+        .img3 {
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top:140px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- b是加粗 i是斜体 u是下划线 -->
+
+    <header class="nav">
+        <img class="img" src="./tx.jpg" alt="tx">
+        <div class="container">
+            <ul>
+                <li><a href="#grwz" class="nav-link site-title">个人网站</a></li>
+
+                <li><a href="#grwz" class="nav-link">简介</a></li>
+                <li><a href="#gzjy" class="nav-link">工作经验</a></li>
+                <li><a href="#xmjy" class="nav-link">项目经验</a></li>
+
+                <li><a href="#sjjy" class="nav-link">实践经验</a></li>
+                <li><a href="#wdtc" class="nav-link">我的特长</a></li>
+                <li><a href="#zwpj" class="nav-link">自我评价</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <img id="switching-img" src="1.png" class="img3" alt="Switching Image">
+
+    <div id="grwz"></div>
+
+
+
+
+
+    <div id="gzjy" class="gzjy">
+        <h1 id="biaoti" onclick="ShowImg()" onmouseout="OutImg()">工作经验</h1>
+
+        <ul class="introduce">
+            <li>2003-2021&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>加里敦股份有限公司</b></li>
+            <p>学习使用电脑软件应用技术<b style="color: red;">(小提示：按wasd可以控制史莱姆移动哦！)</b></p>
+
+            <li>2021-现在&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>厦门软件公司</b></li>
+            <p>熟悉C,C++,Java语言</p>
+        </ul>
+    </div>
+
+    <div id="xmjy" class="xmjy">
+        <h1 id="biaoti" onclick="ShowImg()" onmouseout="OutImg()">项目经验</h1>
+        <ul class="introduce">
+            <li>学生信息管理系统</li>
+            <li>银行用户管理系统</li>
+            <li>教室预约系统</li>
+            <li>机房管理系统</li>
+        </ul>
+    </div>
+
+    <div id="sjjy" class="sjjy">
+        <h1>实践经验</h1>
+        <ul class="introduce">
+            <li>曾经在腾讯实习为期6个月</li>
+            <li>曾经在美团实习为期6个月</li>
+            <li>曾经在网易实习为期6个月</li>
+            <li>曾经在阿里巴巴实习为期6个月</li>
+        </ul>
+    </div>
+    <div id="wdtc" class="wdtc">
+        <h1>我的特长</h1>
+        <ul class="introduce">
+            <li>C++</li>
+            <li>Java</li>
+            <li>腿特长</li>
+        </ul>
+    </div>
+    <div id="zwpj" class="zwpj">
+        <h1>自我评价</h1>
+
+        <ul class="introduce">
+            <li>我是一个程序员</li>
+        </ul>
+    </div>
+    <script>var n = document.querySelector(".nav");
+
+
+        window.addEventListener('scroll', handleScroll);
+
+
+        function handleScroll() {
+            n.style.transform = `translateY(${window.scrollY}px)`;
+
+        }
+
+        function ShowImg() {
+            // 创建图片元素
+            const img = document.createElement('img');
+            img.className = 'img2';
+            img.src = './t1.png';
+
+
+            // 向元素内添加图片
+            var v = document.getElementById('biaoti');
+            v.append(img);
+        }
+
+        function OutImg() {
+            var v = document.getElementById('biaoti');
+            var imgs = v.querySelectorAll('.img2');
+            for (const img of imgs) {
+                img.remove();
+            }
+
+
+            // 获取需要添加图片的元 素
+            var targetElement = document.getElementById('img2');
+
+            // 创建图片元素
+            var imgElement = document.createElement('img');
+            imgElement.src = './t1.png';
+            imgElement.alt = 'Image';
+
+        }
+
+
+        const switchingImg = document.getElementById("switching-img");
+
+        const imgArray = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png"];    // 存储要切换的图片路径
+
+        let currentIndex = 0;    //存储当前图片的索引
+
+        setInterval(function () {   //使用定时器，每隔一段时间就切换一次图片
+            currentIndex = (currentIndex + 1) % imgArray.length;   // 循环更新图片索引
+
+            switchingImg.src = imgArray[currentIndex];   // 更新图片路径
+        }, 91);   // 每隔3000毫秒（3秒）执行一次
+
+
+
+        let x = 0;    //存储x坐标
+        let y = 140;    //存储y坐标
+
+        document.addEventListener("keydown", function (event) {  //监听键盘事件
+            switch (event.key) {   //判断按下的键
+                case "w":
+                    y = y - 35;   //向上移动10个像素
+                    switchingImg.style.top = y + "px";   //将y坐标设置为图片的top属性
+                    break;
+                case "a":
+                    x = x - 35;   //向左移动10个像素
+                    switchingImg.style.left = x + "px";   //将x坐标设置为图片的left属性
+                    break;
+                case "s":
+                    y = y + 35;   //向下移动10个像素
+                    switchingImg.style.top = y + "px";   //将y坐标设置为图片的top属性
+                    break;
+                case "d":
+                    x = x + 35;   //向右移动10个像素
+                    switchingImg.style.left = x + "px";   //将x坐标设置为图片的left属性
+                    break;
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
