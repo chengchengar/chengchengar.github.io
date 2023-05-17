@@ -1,0 +1,37 @@
+@media (max-width: 991px) and (min-width: 768px) {
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  /* 在页面宽度小于 768 像素时应用的样式 */
+  @media (max-width: 767px) {
+    p {
+      font-size: 14px;
+    }
+    .nav{
+        /* 当导航栏宽度不足时，可以让内容自动换行 */
+        flex-wrap: wrap;
+        padding: auto; /* 去掉默认的内边距 */
+        height: 100%; /* 让导航栏高度随内容自动调整 */
+        width: 20px;
+        
+       
+        
+        
+    }
+    .nav li{
+        font-size: 12px;
+        
+        
+       
+
+    }
+    .site-title{
+        font-size: 16px; /* 让网站标题字号增大一些 */
+        margin: 0px; /* 让标题与导航之间的间隔更大一些 */
+    }
+    .img{
+        display: none;
+    }
+  }
