@@ -15,11 +15,29 @@
         padding: auto; /* 去掉默认的内边距 */
         height: 100%; /* 让导航栏高度随内容自动调整 */
         width: 20px;
+        position:relative;
         
        
         
         
     }
+
+    .gzjy {
+
+      
+      width: auto;
+      height: auto;
+     
+      
+  
+  
+  }
+  
+  .gzjy:hover {
+  
+      width: 740px;
+      height: 310px;
+  }
     .nav li{
         font-size: 12px;
         
@@ -33,5 +51,10 @@
     }
     .img{
         display: none;
+    }
+
+    .start{
+      margin-left: 0px;
+      margin-top: 0px ;
     }
   }
