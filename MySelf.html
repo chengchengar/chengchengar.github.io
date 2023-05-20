@@ -2,19 +2,59 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./MySelf.css">
+    <link rel="stylesheet" href="./fonts/ZCOOLKuaiLe-Regular.ttf">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="background"><img src="./xk.jpg" alt=""></div>
+    <p id="typed1"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./earth.png"
+            alt=""></div>
+            <p id="typed2"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./moon.png"
+            alt=""></div>
+            <p id="typed3"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./huoxing.png"
+            alt=""></div>
+            <p id="typed4"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./muxing.png"
+            alt=""></div>
+            <p id="typed5"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./tuxing.png"
+            alt=""></div>
+            <p id="typed6"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./twx.png"
+            alt=""></div>
+            <p id="typed7"></p>
+    <div class="pic middle-block floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><img src="./hwx.png"
+            alt=""></div>
+
+    <!-- <div class="pic"><div class="left-block" data-aos="fade-right " data-aos-anchor-placement="top-center"><img src="./cd.jpg" alt=""></div> </div>
+      <div class="background"><img src="./xk.jpg" alt=""></div> -->
     <div class="background"><img src="./xk2.jpg" alt=""></div>
-    <img class="Move" id="myImage" src="hj1.png" alt="图片">
+    <div id="hj"> <img class="Move" id="myImage" src="hj1.png" alt="图片">
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="floating-image" data-aos="fade-right " data-aos-anchor-placement="center-bottom"><p style="text-align: center;">星辰大海</p></div>
 
     <script>
+
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            delay: 100,
+            offset: -200
+        });
+
         let images = ["hj1.png", "hj2.png", "hj3.png"];
         let currentImageIndex = 0;
 
@@ -24,32 +64,45 @@
             setInterval(() => {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
                 document.getElementById("myImage").src = images[currentImageIndex];
+
             }, 190);
+            setInterval(() => {
+                var myImage = $("#myImage"); // 获取图片元素
+                var offset = myImage.offset(); // 获取图片元素相对文档的坐标
+
+                // 设置文档的滚动位置
+                window.scrollTo({
+                    top: offset.top,
+                    left: offset.left,
+                    behavior: "smooth"
+                });
+            }, 100);
+
         }
 
         // 页面加载完成后，开始自动切换
 
         window.onload = () => {
-           
+
             startAutoSwitch();
             let image = document.getElementById("myImage");
             let x = 730;
-            let y = 5000;
+            let y = 10;
             image.style.left = x + "px";
             image.style.top = y + "px";
             window.addEventListener("keydown", function (event) {
                 switch (event.key) {
                     case "w":
-                        y -= 10;
+                        y -= 7;
                         break;
                     case "s":
-                        y += 10;
+                        y += 7;
                         break;
                     case "a":
-                        x -= 10;
+                        x -= 7;
                         break;
                     case "d":
-                        x += 10;
+                        x += 7;
                         break;
                 }
                 image.style.left = x + "px";
